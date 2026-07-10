@@ -1,4 +1,26 @@
-# AgentBot — Path B Shell
+# Finvest AI
+
+AI Financial Reasoning & Portfolio Assistant
+
+## Overview
+
+Finvest AI is an Agentic AI application that helps users understand financial concepts, analyze portfolios, retrieve market information, and optimize investment decisions using LLMs, RAG, LangGraph, and financial tools.
+
+## Tech Stack
+
+- Python
+- FastAPI
+- Azure OpenAI
+- LangGraph (Upcoming)
+- LangChain (Upcoming)
+- ChromaDB (Upcoming)
+- yFinance (Upcoming)
+
+
+
+# ServiceNow AI.Accelerate Bootcamp
+## Capstone Project Guidelines
+## AgentBot — Path B Shell
 
 This is your **starting point** for Path B: Build Your Own Agent.
 
