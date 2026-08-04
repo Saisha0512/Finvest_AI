@@ -1,0 +1,9 @@
+[
+  {"id": "TXN-0001", "user_id": "U001", "date": "2026-07-01", "type": "buy", "ticker": "VTI", "shares": 5, "price": 245.30},
+  {"id": "TXN-0002", "user_id": "U001", "date": "2026-07-15", "type": "buy", "ticker": "BND", "shares": 10, "price": 73.10},
+  {"id": "TXN-0003", "user_id": "U002", "date": "2026-06-28", "type": "buy", "ticker": "NVDA", "shares": 3, "price": 470.00},
+  {"id": "TXN-0004", "user_id": "U002", "date": "2026-07-20", "type": "sell", "ticker": "TSLA", "shares": 2, "price": 255.00},
+  {"id": "TXN-0005", "user_id": "U004", "date": "2026-07-05", "type": "buy", "ticker": "SCHD", "shares": 15, "price": 75.20},
+  {"id": "TXN-0006", "user_id": "U005", "date": "2026-07-22", "type": "buy", "ticker": "VTI", "shares": 3, "price": 246.00},
+  {"id": "TXN-0007", "user_id": "U003", "date": "2026-06-10", "type": "buy", "ticker": "VOO", "shares": 10, "price": 405.00}
+]

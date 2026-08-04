@@ -1,0 +1,8 @@
+[
+  {"user_id": "U001", "goal": "Retirement", "target_amount": 1500000, "target_year": 2062, "monthly_contribution": 600},
+  {"user_id": "U002", "goal": "Retirement", "target_amount": 2000000, "target_year": 2050, "monthly_contribution": 1200},
+  {"user_id": "U002", "goal": "Vacation Home", "target_amount": 150000, "target_year": 2033, "monthly_contribution": 400},
+  {"user_id": "U004", "goal": "Retirement", "target_amount": 900000, "target_year": 2033, "monthly_contribution": 1500},
+  {"user_id": "U005", "goal": "Retirement", "target_amount": 2500000, "target_year": 2066, "monthly_contribution": 250},
+  {"user_id": "U005", "goal": "Emergency Fund", "target_amount": 10000, "target_year": 2027, "monthly_contribution": 300}
+]
