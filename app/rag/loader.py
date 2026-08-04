@@ -1,5 +1,4 @@
-"""Load markdown knowledge docs from docs/<category>/*.md -- According to the prompt given to the chatbot"""
-
+# Loading markdown knowledge docs from docs/<category>/*.md -- According to the prompt given to the chatbot
 # This will loop over every subfolder of docs
 
 from .. import config
