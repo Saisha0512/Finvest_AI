@@ -1,0 +1,52 @@
+[
+  {
+    "user_id": "U001",
+    "risk_profile": "moderate",
+    "cash_balance": 2400.00,
+    "holdings": [
+      {"ticker": "VTI", "name": "Vanguard Total Stock Market ETF", "shares": 25, "avg_cost": 210.00},
+      {"ticker": "BND", "name": "Vanguard Total Bond Market ETF", "shares": 30, "avg_cost": 72.50},
+      {"ticker": "AAPL", "name": "Apple Inc.", "shares": 12, "avg_cost": 165.20},
+      {"ticker": "VXUS", "name": "Vanguard Total International Stock ETF", "shares": 18, "avg_cost": 58.10}
+    ]
+  },
+  {
+    "user_id": "U002",
+    "risk_profile": "aggressive",
+    "cash_balance": 800.00,
+    "holdings": [
+      {"ticker": "TSLA", "name": "Tesla Inc.", "shares": 15, "avg_cost": 190.00},
+      {"ticker": "QQQ", "name": "Invesco QQQ Trust", "shares": 20, "avg_cost": 380.00},
+      {"ticker": "NVDA", "name": "NVIDIA Corp.", "shares": 8, "avg_cost": 460.00},
+      {"ticker": "ARKK", "name": "ARK Innovation ETF", "shares": 25, "avg_cost": 45.00}
+    ]
+  },
+  {
+    "user_id": "U003",
+    "risk_profile": "moderate",
+    "cash_balance": 5000.00,
+    "holdings": [
+      {"ticker": "VOO", "name": "Vanguard S&P 500 ETF", "shares": 40, "avg_cost": 400.00},
+      {"ticker": "AGG", "name": "iShares Core U.S. Aggregate Bond ETF", "shares": 35, "avg_cost": 98.00}
+    ]
+  },
+  {
+    "user_id": "U004",
+    "risk_profile": "conservative",
+    "cash_balance": 12000.00,
+    "holdings": [
+      {"ticker": "BND", "name": "Vanguard Total Bond Market ETF", "shares": 120, "avg_cost": 71.00},
+      {"ticker": "SCHD", "name": "Schwab US Dividend Equity ETF", "shares": 60, "avg_cost": 74.50},
+      {"ticker": "VTIP", "name": "Vanguard Short-Term Inflation-Protected Securities ETF", "shares": 50, "avg_cost": 48.00}
+    ]
+  },
+  {
+    "user_id": "U005",
+    "risk_profile": "aggressive",
+    "cash_balance": 350.00,
+    "holdings": [
+      {"ticker": "VTI", "name": "Vanguard Total Stock Market ETF", "shares": 10, "avg_cost": 205.00},
+      {"ticker": "QQQ", "name": "Invesco QQQ Trust", "shares": 5, "avg_cost": 375.00}
+    ]
+  }
+]

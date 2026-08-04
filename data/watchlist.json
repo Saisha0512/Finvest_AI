@@ -1,0 +1,7 @@
+[
+  {"user_id": "U001", "ticker": "MSFT", "name": "Microsoft Corp.", "added_on": "2026-07-02", "note": "Considering adding for tech exposure alongside AAPL."},
+  {"user_id": "U001", "ticker": "SCHD", "name": "Schwab US Dividend Equity ETF", "added_on": "2026-07-15", "note": "Interested in dividend income growth."},
+  {"user_id": "U002", "ticker": "AMD", "name": "Advanced Micro Devices Inc.", "added_on": "2026-06-20", "note": "Watching for entry point."},
+  {"user_id": "U004", "ticker": "VYM", "name": "Vanguard High Dividend Yield ETF", "added_on": "2026-07-10", "note": "Evaluating for stable income near retirement."},
+  {"user_id": "U005", "ticker": "SOXX", "name": "iShares Semiconductor ETF", "added_on": "2026-07-28", "note": "Exploring thematic exposure to chips."}
+]

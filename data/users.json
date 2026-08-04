@@ -3,18 +3,45 @@
     "id": "U001",
     "name": "Alex Rivera",
     "role": "user",
-    "context": "Example user — replace with personas that fit your domain"
+    "age": 29,
+    "risk_profile": "moderate",
+    "time_horizon_years": 25,
+    "context": "Early-career software engineer investing primarily for retirement."
   },
   {
     "id": "U002",
     "name": "Jordan Kim",
     "role": "user",
-    "context": "Example user — replace with personas that fit your domain"
+    "age": 41,
+    "risk_profile": "aggressive",
+    "time_horizon_years": 20,
+    "context": "Mid-career marketing manager with high risk tolerance, comfortable with volatility."
   },
   {
     "id": "U003",
     "name": "Sam Patel",
     "role": "admin",
-    "context": "Example admin user — useful if your agent has role-based behavior"
+    "age": 35,
+    "risk_profile": "moderate",
+    "time_horizon_years": 15,
+    "context": "Admin user — can view portfolio analytics across all users."
+  },
+  {
+    "id": "U004",
+    "name": "Priya Sharma",
+    "role": "user",
+    "age": 58,
+    "risk_profile": "conservative",
+    "time_horizon_years": 6,
+    "context": "Nearing retirement, prioritizes capital preservation over growth."
+  },
+  {
+    "id": "U005",
+    "name": "Marcus Chen",
+    "role": "user",
+    "age": 24,
+    "risk_profile": "aggressive",
+    "time_horizon_years": 35,
+    "context": "Recent graduate just starting to invest, very long time horizon."
   }
 ]
