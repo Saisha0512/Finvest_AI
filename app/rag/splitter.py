@@ -1,4 +1,4 @@
-"""Split markdown docs into chunks on ## headers (structure-aware chunking)."""
+# Splitting markdown docs into chunks on ## headers (structure-aware chunking).
 import re
 
 
