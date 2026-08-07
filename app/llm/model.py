@@ -1,20 +1,11 @@
-# Azure OpenAI client factory — single source of truth for the LLM connection.
-
-# Creating Azure client factory
-
-from .. import config
-
+# Anthropic client factory — single source of truth for the LLM connection.
+import os
 
 def get_client():
-    from openai import AzureOpenAI
+    import anthropic
 
-    if not (config.AZURE_ENDPOINT and config.AZURE_API_KEY):
+    if not os.environ.get("ANTHROPIC_API_KEY"):
         raise RuntimeError(
-            "Azure OpenAI credentials are missing. Copy .env.example to .env "
-            "and fill in your values."
+            "ANTHROPIC_API_KEY is missing. Add it to your .env file."
         )
-    return AzureOpenAI(
-        azure_endpoint=config.AZURE_ENDPOINT,
-        api_key=config.AZURE_API_KEY,
-        api_version=config.AZURE_API_VERSION,
-    )
+    return anthropic.Anthropic()
