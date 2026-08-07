@@ -19,7 +19,8 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 from . import config
-from .services.rag_service import answer_from_docs
+from .graph.graph import agent_graph
+# from .services.rag_service import answer_from_docs
 
 app = FastAPI(title="Finvest AI")  # TODO: rename to match your agent
 
@@ -70,12 +71,17 @@ def users():
 @app.post("/api/chat")
 def chat(req: ChatRequest, x_user_id: str = Header(default="", alias="X-User-Id")):
     """
-    Answers grounded in docs/ via RAG (see app/services/rag_service.py).
-    Intent classification, routing, and actions come in Phase 2.
+    Classifies intent, routes to the right handler, and returns a grounded
+    reply. See app/graph/ for the orchestration logic.
     """
     user = _USERS.get(x_user_id)
-    reply = answer_from_docs(req.message, user)
-    return {"reply": reply}
+    result = agent_graph.invoke({
+        "query": req.message,
+        "user": user,
+        "intent": "",
+        "reply": "",
+    })
+    return {"reply": result["reply"]}
 
 
 @app.get("/")
