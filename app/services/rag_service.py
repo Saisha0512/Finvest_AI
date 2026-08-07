@@ -20,12 +20,11 @@ def answer_from_docs(query: str, user: dict | None) -> str:
     context = format_context(chunks)
 
     client = get_client()
-    resp = client.chat.completions.create(
-        model=config.AZURE_CHAT_DEPLOYMENT,
+    resp = client.messages.create(
+        model=config.CLAUDE_MODEL,
+        max_tokens=1024,
         temperature=0.3,
-        messages=[
-            {"role": "system", "content": RAG_SYSTEM_PROMPT.format(who=who, context=context)},
-            {"role": "user", "content": query},
-        ],
+        system=RAG_SYSTEM_PROMPT.format(who=who, context=context),
+        messages=[{"role": "user", "content": query}],
     )
-    return resp.choices[0].message.content
+    return resp.content[0].text

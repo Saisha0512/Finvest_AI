@@ -13,6 +13,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 DOCS_DIR = ROOT / "docs"  # your policy / knowledge documents live here
 
+# Anthropic Configurations
+CLAUDE_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6")
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
+
 # Azure AI Configurations
 AZURE_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
 AZURE_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
