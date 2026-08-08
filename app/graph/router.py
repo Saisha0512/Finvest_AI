@@ -1,4 +1,4 @@
-# The intent classifier — the agent's 'nervous system'.
+"""The intent classifier — the agent's 'nervous system'."""
 
 INTENTS = [
     "policy_qa",
@@ -10,8 +10,7 @@ INTENTS = [
 ]
 
 CLASSIFIER_SYSTEM = f"""You are an intent classifier for Finvest AI, a financial assistant.
-Classify the user's message into EXACTLY ONE of these intents. Reply with ONLY
-the intent word, nothing else — no punctuation, no explanation.
+Classify the user's message into EXACTLY ONE of these intents.
 
 - policy_qa: general financial education questions (risk profiles, ETFs,
   diversification, glossary terms, market basics, FAQs)
@@ -24,18 +23,30 @@ the intent word, nothing else — no punctuation, no explanation.
   real-world actions the agent cannot do, or requests about another user's
   data
 
-Reply with exactly one word from: {', '.join(INTENTS)}"""
+Respond with ONLY the intent label, exactly as spelled above, in lowercase,
+with the underscore. No punctuation. No explanation. No extra words.
+Example valid responses: policy_qa
+portfolio_balance
+off_topic"""
 
 
 def classify_intent(client, model: str, query: str) -> str:
     resp = client.messages.create(
         model=model,
-        max_tokens=10,
+        max_tokens=15,
         system=CLASSIFIER_SYSTEM,
         messages=[{"role": "user", "content": query}],
     )
-    text = resp.content[0].text.strip().lower()
-    for intent in INTENTS:
-        if intent in text:
+    raw = resp.content[0].text.strip().lower()
+
+    # Exact match first
+    if raw in INTENTS:
+        return raw
+
+    # Fallback: pick the longest matching intent name found anywhere in the reply
+    # (longest first, so "portfolio_balance" is checked before any shorter false match)
+    for intent in sorted(INTENTS, key=len, reverse=True):
+        if intent in raw:
             return intent
+
     return "off_topic"

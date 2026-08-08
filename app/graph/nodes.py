@@ -9,6 +9,7 @@ from .router import classify_intent
 def classify_node(state: dict) -> dict:
     client = get_client()
     intent = classify_intent(client, config.CLAUDE_MODEL, state["query"])
+    print(f"[DEBUG] classified intent: {intent!r}")   # ADD THIS LINE
     return {"intent": intent}
 
 
@@ -17,18 +18,26 @@ def policy_node(state: dict) -> dict:
 
 
 def portfolio_node(state: dict) -> dict:
+    if not state.get("user"):
+        return {"reply": "I couldn't identify who you are — please select a user first."}
     return {"reply": finance_service.answer_portfolio(state["query"], state["user"])}
 
 
 def watchlist_node(state: dict) -> dict:
+    if not state.get("user"):
+        return {"reply": "I couldn't identify who you are — please select a user first."}
     return {"reply": finance_service.answer_watchlist(state["query"], state["user"])}
 
 
 def goals_node(state: dict) -> dict:
+    if not state.get("user"):
+        return {"reply": "I couldn't identify who you are — please select a user first."}
     return {"reply": finance_service.answer_goals(state["query"], state["user"])}
 
 
 def transactions_node(state: dict) -> dict:
+    if not state.get("user"):
+        return {"reply": "I couldn't identify who you are — please select a user first."}
     return {"reply": finance_service.answer_transactions(state["query"], state["user"])}
 
 
