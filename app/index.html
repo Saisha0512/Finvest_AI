@@ -447,14 +447,18 @@
     }
 
     async function loadUsers() {
+      sendBtn.disabled = true;
+      input.disabled = true;
       const r = await fetch("/api/users");
       const users = await r.json();
       for (const u of users) {
         const opt = document.createElement("option");
         opt.value = u.id;
-        opt.textContent = `${u.full_name} (${u.location_code})`;
+        opt.textContent = `${u.name} (${u.role})`;
         userSel.appendChild(opt);
       }
+      sendBtn.disabled = false;
+      input.disabled = false;
     }
 
     async function send(msg) {
